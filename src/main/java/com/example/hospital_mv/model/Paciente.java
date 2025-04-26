@@ -21,7 +21,7 @@ public class Paciente {
     private int id;
     
     @Column(unique = true, length = 13, nullable = false)
-    private String rut;
+    private String run;
     
     @Column(nullable = false)
     private String nombres;
