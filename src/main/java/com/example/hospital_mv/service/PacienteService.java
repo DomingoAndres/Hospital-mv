@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 @Transactional
@@ -20,8 +20,8 @@ public class PacienteService {
         return pacienteRepository.findAll();
     }
 
-    public Optional<Paciente> findById(int id){
-        return pacienteRepository.findById(id);
+    public Paciente findById(int id){
+        return pacienteRepository.findById(id).get();
     }
 
     public Paciente save(Paciente paciente){
