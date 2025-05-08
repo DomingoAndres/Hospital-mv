@@ -31,4 +31,5 @@ public class PacienteService {
     public void delete(Integer id){
         pacienteRepository.deleteById(id);
     }
+    
 }

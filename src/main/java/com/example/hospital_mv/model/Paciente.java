@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -34,5 +35,9 @@ public class Paciente {
     
     @Column(nullable = false)
     private String correo;
+
+    
+    @OneToMany(mappedBy = "paciente")
+    private List<Atencion> atenciones;
 
 }
